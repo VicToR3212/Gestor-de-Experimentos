@@ -1,7 +1,7 @@
 package com.info.dominio.experimentos;
 
 public class Experimentos  {
-    private String nOmbreExperimento;
+    private String nombreExperimento;
     private double minutos;
     private boolean resultado;
 
@@ -15,13 +15,13 @@ public class Experimentos  {
 
     public Experimentos( String nombreExperimento, double minutos, boolean resultado) {
 
-        this.nOmbreExperimento = nombreExperimento;
+        this.nombreExperimento = nombreExperimento;
         this.minutos = minutos;
         this.resultado = resultado;
     }
 // metods get and set
-    public String getNOmbreExperimento() {
-        return nOmbreExperimento;
+    public String getNombreExperimento() {
+        return nombreExperimento;
     }
 
 

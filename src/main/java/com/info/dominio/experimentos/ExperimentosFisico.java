@@ -1,6 +1,6 @@
 package com.info.dominio.experimentos;
 
-public class ExFisico extends Experimentos {
+public class ExperimentosFisico extends Experimentos {
 
     /**
      * constructor de la clase
@@ -11,7 +11,7 @@ public class ExFisico extends Experimentos {
      * @param medior            String tipo de instrumento de medicion
      */
 
-    public ExFisico(
+    public ExperimentosFisico(
                     String nombreExperimento,
                     double minutos,
                     boolean resultado,

@@ -1,9 +1,12 @@
 package com.info.dominio.investigacion;
 
-public class Investigadores extends Investigador {
+public class Investigadores {
 
         final int id;
-        int cantidad_proyecto;
+        private int cantidadProyecto;
+        private int edad;
+        private  String nombre ;
+
 
     /**
      * constructor de la clase
@@ -11,15 +14,16 @@ public class Investigadores extends Investigador {
      * @param edad              reciven la edad del investigador
      * @param nombre            reciven el nombre del investigador
      * @param id                recive el numerode documento del investigador
-     * @param cantidad_proyecto la cantidad de proyecto que tien ese investigador
+     * @param cantidadProyecto la cantidad de proyecto que tien ese investigador
      *
      */
 
-        public Investigadores(int edad,String nombre, int id,int cantidad_proyecto) {
-            super(edad,nombre);
+        public Investigadores(int edad,String nombre, int id,int cantidadProyecto) {
+            this.edad=edad;
+            this.nombre=nombre;
             this.id = id;
 
-            this.cantidad_proyecto=cantidad_proyecto;
+            this.cantidadProyecto=cantidadProyecto;
         }
 
 
@@ -30,12 +34,21 @@ public class Investigadores extends Investigador {
 
 
 
-    public int getCantidad_proyecto() {
-        return cantidad_proyecto;
+    public int getCantidadProyecto() {
+        return cantidadProyecto;
     }
 
-    public void setCantidad_proyecto(int cantidad_proyecto) {
-        this.cantidad_proyecto = cantidad_proyecto;
+    public void setCantidadProyecto(int cantidadProyecto) {
+        this.cantidadProyecto = cantidadProyecto;
+
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getNombre() {
+        return nombre;
     }
 }
 
