@@ -1,10 +1,17 @@
-package com.info;
+package com.info.experimentos;
 
 public class ExQuimico extends Experimentos {
     private  String tipoReactivo;
 
 
-
+    /**
+     * constructor de la clase
+     *
+     * @param NOmbreExperimento String representa el nombre del experimento
+     * @param minutos           Double parametro para duracion del experimento
+     * @param resultado         bulean el resultado del experimento
+     * @param tipoReactivo      String tipo de ractivo quimico utilizado
+     */
 
 
 //constructor

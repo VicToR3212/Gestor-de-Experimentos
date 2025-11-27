@@ -1,10 +1,20 @@
-package com.info;
+package com.info.investigacion;
 
-public class Investigadores extends  Investigador {
+public class Investigadores extends Investigador {
 
-        private int id;
+        final int id;
         int cantidad_proyecto;
-        //construcor
+
+    /**
+     * constructor de la clase
+     *
+     * @param edad              reciven la edad del investigador
+     * @param nombre            reciven el nombre del investigador
+     * @param id                recive el numerode documento del investigador
+     * @param cantidad_proyecto la cantidad de proyecto que tien ese investigador
+     *
+     */
+
         public Investigadores(int edad,String nombre, int id,int cantidad_proyecto) {
             super(edad,nombre);
             this.id = id;
@@ -18,9 +28,7 @@ public class Investigadores extends  Investigador {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
 
     public int getCantidad_proyecto() {
         return cantidad_proyecto;

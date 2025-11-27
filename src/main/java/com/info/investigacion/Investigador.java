@@ -1,18 +1,22 @@
-package com.info;
-
-import java.util.ArrayList;
-import java.util.Scanner;
+package com.info.investigacion;
 
 public class Investigador {
     private int edad;
     private  String nombre ;
-    //constructor
+
+    /**
+     * constructor de la clase
+     *
+     * @param edad   reciven la edad del investigador
+     * @param nombre reciven el nombre del investigador
+     *
+     */
     public Investigador(int edad, String nombre) {
         this.edad = edad;
         this.nombre = nombre;
     }
 
-//metodos get and set
+
 
     public int getEdad() {
         return edad;

@@ -1,21 +1,26 @@
 package com.info;
 
+import com.info.servis.ServisExperimentos;
+import com.info.servis.ServisInvestigador;
+
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class menu {
+public class Menu {
 
 
-    private Scanner colaboradosr = new Scanner(System.in);
-        //menu de opciones
+    final Scanner colaboradosr = new Scanner(System.in);
 
+    /**
+     * es un menu de opciones  para el usurio
+     */
     public void menus() throws IOException {
-        Crud crud =new Crud();
-        crud_cvs cr= new crud_cvs();
-        busqueda_analicis bus = new busqueda_analicis();
+        ServisExperimentos servisExperimentos =new ServisExperimentos();
+        ServisInvestigador servi =new ServisInvestigador();
+        Crud_cvs cr= new Crud_cvs();
+        Busqueda_analicis bus = new Busqueda_analicis();
         boolean salir = true;
-        int men,sli=0;
+        int men,sli;
 
 
         do {
@@ -31,53 +36,51 @@ public class menu {
             System.out.println("-opcion 8 exportar a cvc                                  -");
             System.out.println("-----------------------------------------------------------");
 
-
-
-
-
             men=colaboradosr.nextInt();
             switch (men) {
                 case 1:
-                   crud.Colaboradores();
+                   servi.Colaboradores();
+
+
                     break;
 
                 case 2:
-                    crud.CrearExperimento(crud);
+                    servisExperimentos.agregar(servi);
                     break;
                 case 3:
                     System.out.println("-opcion 3 mostrar listado de resultados                   -");
-                    bus.MostrarListadoFisico(crud);
+                    bus.mostrarListadoFisico(servisExperimentos);
 
 
                     break;
                 case 4:
                     System.out.println("-opcion 4 mostrar listado experimentos exitosos y fallidos-");
-                    bus.resultadosEx(crud);
+                    bus.resultadosEx(servisExperimentos);
 
                     break;
                     case 5:
                         System.out.println("-opcion 5 muestra el experimento de mayor duracion        -");
 
-                        bus.mostrarexMayortiempo(crud);
+                        bus.mostrarexMayortiempo(servisExperimentos);
                     break;
                 case 6:
-                        bus.promedio_prosentage(crud);
+                        bus.promedioProsentage(servisExperimentos);
                     break;
                 case 7:
-                   bus.investigadormayorExReali(crud);
+                   bus.investigadorMayorExReali(servi);
 
 
                     break;
                 case 8:
-                    cr.GuardarListaInves(crud);
+                    cr.guardarListaInves(servi);
                     break;
                 default :
 
             }
-            System.out.println("desea salir presione  0 para slir " );
+            System.out.println("desea finalizar el programa presione  0 para slir " );
             sli=colaboradosr.nextInt();
             if (sli==0)salir=false;
-        } while (salir==true);
+        } while (salir);
 
 
     }
