@@ -1,9 +1,6 @@
 package com.info.service.experimentos;
 
-import com.info.dominio.experimentos.ExperimentosQuimico;
 import com.info.service.investigador.implement.InvestigadorServiceImpl;
-
-import java.util.ArrayList;
 
 public interface ICreaValidaGuarda {
 

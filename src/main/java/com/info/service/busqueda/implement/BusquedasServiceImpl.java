@@ -13,7 +13,7 @@ public class BusquedasServiceImpl implements IBusqueda {
 
 
         /**
-         * meustra el listado de los experimentos fisicos quimicos
+         * meustra  el listado de los experimentos fisicos quimicos
          *
          * @param investigador recibe objeto de tipo ServisExperimentos
          */
