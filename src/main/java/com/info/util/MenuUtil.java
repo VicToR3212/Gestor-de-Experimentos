@@ -1,9 +1,9 @@
 package com.info.util;
 
-import com.info.service.almacenarCvs.implement.CrudCvsServis;
-import com.info.service.experimentos.implement.ExperimentosService;
-import com.info.service.experimentos.implement.InvestigadorService;
-import com.info.service.busqueda.implement.BusquedasService;
+import com.info.service.almacenarCvs.implement.CrudCvsServiceImpl;
+import com.info.service.experimentos.implement.ExperimentosServiceImpl;
+import com.info.service.investigador.implement.InvestigadorServiceImpl;
+import com.info.service.busqueda.implement.BusquedasServiceImpl;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -17,12 +17,12 @@ public class MenuUtil {
      * es un menu de opciones  para el usurio
      */
     public void menus() throws IOException {
-        ExperimentosService experimentosService =new ExperimentosService();
-        InvestigadorService servi =new InvestigadorService();
-        CrudCvsServis cr= new CrudCvsServis();
-        BusquedasService bus = new BusquedasService();
+        ExperimentosServiceImpl experimentosService =new ExperimentosServiceImpl();
+        InvestigadorServiceImpl investigadorServiceImpl =new InvestigadorServiceImpl();
+        CrudCvsServiceImpl crudCvsServis= new CrudCvsServiceImpl();
+        BusquedasServiceImpl busquedasService = new BusquedasServiceImpl();
         boolean salir = true;
-        int men,sli;
+        int menu,sli;
 
         do {
             System.out.println("elige la accione a realizar digitando los numeros siquientes ");
@@ -37,43 +37,43 @@ public class MenuUtil {
             System.out.println("-opcion 8 exportar a cvc                                  -");
             System.out.println("-----------------------------------------------------------");
 
-            men=colaboradosr.nextInt();
-            switch (men) {
+            menu=colaboradosr.nextInt();
+            switch (menu) {
                 case 1:
-                   servi.colaboradores();
+                   investigadorServiceImpl.colaboradores();
 
 
                     break;
 
                 case 2:
-                    experimentosService.agregar(servi);
+                    experimentosService.agregar(investigadorServiceImpl);
                     break;
                 case 3:
                     System.out.println("-opcion 3 mostrar listado de resultados                   -");
-                    bus.mostrarListadoFisico(experimentosService);
+                    busquedasService.mostrarListadoFisico(experimentosService);
 
 
                     break;
                 case 4:
                     System.out.println("-opcion 4 mostrar listado experimentos exitosos y fallidos-");
-                    bus.resultadosEx(experimentosService);
+                    busquedasService.resultadosExperimento(experimentosService);
 
                     break;
                     case 5:
                         System.out.println("-opcion 5 muestra el experimento de mayor duracion        -");
 
-                        bus.mostrarexMayortiempo(experimentosService);
+                        busquedasService.mostrarExperimentoMayorTiempo(experimentosService);
                     break;
                 case 6:
-                        bus.promedioProsentage(experimentosService);
+                        busquedasService.promedioProsentage(experimentosService);
                     break;
                 case 7:
-                   bus.investigadorMayorExReali(servi);
+                   busquedasService.investigadorMayorExperimentoReali(investigadorServiceImpl);
 
 
                     break;
                 case 8:
-                    cr.guardarListaInves(servi);
+                    crudCvsServis.guardarListaInvestigadores(investigadorServiceImpl);
                     break;
                 default :
 

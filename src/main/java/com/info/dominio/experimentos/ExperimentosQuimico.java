@@ -1,13 +1,13 @@
 package com.info.dominio.experimentos;
 
-public class ExQuimico extends Experimentos {
+public class ExperimentosQuimico extends Experimentos {
     private  String tipoReactivo;
 
 
     /**
      * constructor de la clase
      *
-     * @param NOmbreExperimento String representa el nombre del experimento
+     * @param nombreExperimento String representa el nombre del experimento
      * @param minutos           Double parametro para duracion del experimento
      * @param resultado         bulean el resultado del experimento
      * @param tipoReactivo      String tipo de ractivo quimico utilizado
@@ -15,12 +15,12 @@ public class ExQuimico extends Experimentos {
 
 
 //constructor
-    public ExQuimico(
-                     String NOmbreExperimento,
+    public ExperimentosQuimico(
+                     String nombreExperimento,
                      double minutos,
                      boolean resultado,
                      String tipoReactivo) {
-        super( NOmbreExperimento, minutos, resultado);
+        super( nombreExperimento, minutos, resultado);
         this.tipoReactivo = tipoReactivo;
     }
 //metodos  get and set
