@@ -17,7 +17,7 @@ public class BusquedasServiceImpl implements IBusqueda {
          *
          * @param investigador recibe objeto de tipo ServisExperimentos
          */
-
+        @Override
         public void mostrarListadoFisico(ExperimentosServiceImpl investigador) {
             System.out.println("lista de exprimentos fisicos    ");
             mostrarExperimentosFisico(investigador);
@@ -71,6 +71,8 @@ public class BusquedasServiceImpl implements IBusqueda {
          *
          * @param experimentosService recibe un objeto de servisExperimentos
          */
+        @Override
+
         public void resultadosExperimento(ExperimentosServiceImpl experimentosService) {
             int contador1 = 0, contador2 = 0;
             for (ExperimentosQuimico ex : experimentosService.getExperimentosQuimicos()) {
@@ -94,6 +96,7 @@ public class BusquedasServiceImpl implements IBusqueda {
          *
          * @param experimentosService recibe un objeto de servisExperimentos
          */
+        @Override
 
         public void mostrarExperimentoMayorTiempo(ExperimentosServiceImpl experimentosService) {
             double minutosExperimentosQuimicos = experimentosService.getExperimentosFisicos().get(0).getMinutos();
@@ -121,6 +124,7 @@ public class BusquedasServiceImpl implements IBusqueda {
          *
          * @param experimentosService recibe un objeto de servisExperimentos
          */
+        @Override
 
         public void promedioProsentage(ExperimentosServiceImpl experimentosService) {
             double minutos = 0;
@@ -158,6 +162,8 @@ public class BusquedasServiceImpl implements IBusqueda {
          *
          * @param servisExperimentos recibe un objeto de servisExperimentos
          */
+        @Override
+
         public  void investigadorMayorExperimentoReali(InvestigadorServiceImpl servisExperimentos){
                 int comparador=0,edad=0;
                 String nombre="";
